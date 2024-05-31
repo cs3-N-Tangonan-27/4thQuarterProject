@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biotechonology</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .background-image {
+        background-image: url('assets/bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: transparent;
+        color: white;
+        font-weight: bold;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .nav-tabs {
+        display: flex;
+        font-family: Arial, sans-serif;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: aliceblue;
+        font-weight: bold;
+        border-bottom: 2px solid aliceblue;
+    }
+
+    .nav-link {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        transition: background-color 0.3s;
+    }
+
+    .nav-link:hover {
+        background-color: #555;
+    }
+
+    .text-dark {
+        color: black;
+    }
+
+    .fw-bold {
+        font-weight: bold;
+        font-size: xx-large;
+    }
+
+    .fs-3 {
+        font-size: x-large;
+    }
+
+    .form-container {
+        border-left: 5px solid white;
+        border-right: 5px solid white;
+        margin-left: 150px;
+        padding: 10px;
+        width: 300px;
+        color: white;
+        font-family: Tahoma;
+    }
+</style>
+
+<body>
+    <div class="background-image">
+        <nav class="navbar">
+            <div class="logo">
+                <p class="text-dark fw-bold" style="margin-bottom: 0px;">BIOTECHNOLOGY</p>
+                <p class="text-dark fs-3"
+                    style="margin-bottom: 0px; margin-top: 0px; padding: 0px; display: flex; justify-content: center;">
+                    innovating the future</p>
+            </div>
+            <div class="nav-tabs">
+                <a href="home.html" class=" nav-link">Home</a>
+                <a href="about.html" class="nav-link ">About</a>
+                <a href="importance.html" class="nav-link ">Importance</a>
+                <a href="whatsnew.html" class="nav-link">What's New</a>
+                <a href="signup.html" class="nav-link active">Sign-up</a>
+            </div>
+        </nav>
+
+        <div class="container" style="margin-top: 0px; margin-bottom: 0px; display: flex; justify-content: center;">
+            <h1 style="font-family:Tahoma; text-transform: uppercase;">"Join Us to Explore the Future of Biotechnology!"
+            </h1>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <p style="text-align: justify; margin-left: 50px; font-family: Tahoma; font-size:x-large;">
+                    Engaging with our
+                    website allows you to stay informed about the latest advancements and
+                    breakthroughs in biotechnology, empowering you with knowledge that can shape a better future. Join
+                    our community to connect with experts, access exclusive content, and contribute to discussions that
+                    drive innovation and progress.</p>
+                <p style=" text-align: left; margin-left: 100px;">
+                    Contact Us: [0916 314 2152, ntangonan@crc.pshs.edu.ph] <br>
+                    Newsletter Signup: Stay updated with the latest in biotechnology. <br>
+                    Copyright @2024Pisay, Crc
+                </p>
+            </div>
+
+            <div class=" col">
+                <div class="form-container">
+                    <form id="signupForm">
+                        <h2>SIGN UP HERE</h2>
+                        <h3 style="margin-bottom: 0px;">Full Name</h3>
+                        <input type="text" id="fullname" placeholder="Enter Fullname here" autofocus required>
+                        <h3 style="margin-bottom: 0px;">Email</h3>
+                        <input type="email" id="email" placeholder="Enter Email here" required>
+                        <h3 style="margin-bottom: 0px;" >Password</h3>
+                        <input type="password" id="password" placeholder="Enter Password here" required>
+                        <h3 style="margin-bottom: 0px;">Confirm Password</h3>
+                        <input type="password" id="confirmPassword" placeholder="Cofirm Password here" required>
+                        <div class="container" style="display: flex; justify-content: center; margin-top: 10px;">
+                            <button
+                                style="background-color: cornflowerblue; border: 0; border-radius: 20px; width: 100px; height: 50px; color: white;">
+                                <b>
+                                    SIGN UP
+                                </b>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Enter correct password.');
+                return;
+            }
+
+            alert(`Account successfully created!. Welcome ${fullname}`);
+        });
+    </script>
+
+
+</body>
+
+</html>
